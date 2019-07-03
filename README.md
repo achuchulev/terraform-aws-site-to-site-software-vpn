@@ -16,15 +16,13 @@
 
 ## The module does the following:
 
-* Creates two Virtual Private Clouds (VPCs) for the main and subsidary networks
-* Creates a two Internet Gateway (IG) and attaches them to each VPC
-* Creates an EC2 instance on main VPC using prebuilt OpenVPN Access Server appliance AMI
-* Creates an EC2 instance on subsidary VPC using prebuilt OpenVPN Linux Gateway client AMI 
-* Allocates and assosiates Elastic IP addresses for each instance
-* Creates static routes for each VPC pointing to the main and subsidary networks
-* Congigures OpenVPN Access Server, creates vpn client profile and upload it to OpenVPN Linux Gateway client
-
-
+* Create VPC-A in one AWS Region
+* Create VPC-B in different AWS Region
+* Launch EC2 instance in VPC-A (acts as OpenVPN Access Server)
+* Launch EC2 instance in VPC-B (acts as a OpenVPN Linux Gateway)
+* Configure OpenVPN Access Server on EC2 in VPC-A
+* Export VPN configuration from VPC-A and import the settings in OpenVPN Linux Gateway on EC2 in VPC-B
+* Start the tunnel from VPC-B to VPC-A
 
 ## How to use
 
