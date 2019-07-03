@@ -1,4 +1,4 @@
-# Terraform module to provision a site-to-site VPN connection between VPCs on AWS
+# Terraform module to provision a software site-to-site VPN connection between VPCs on AWS
 
 ## High level overview
 
