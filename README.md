@@ -16,8 +16,12 @@
 
 ## The module does the following:
 
-* Create VPC-A in one AWS Region
-* Create VPC-B in different AWS Region
+* Create VPC-A in AWS Region A
+* Create VPC-B in AWS Region B
+* Create Security Group in AWS Region A
+* Create Security Group in AWS Region B
+* Create new static routes for VPC-B in VPC-A 
+* Create new static routes for VPC-A in VPC-B
 * Launch EC2 instance in VPC-A (acts as OpenVPN Access Server)
 * Launch EC2 instance in VPC-B (acts as a OpenVPN Linux Gateway)
 * Configure OpenVPN Access Server on EC2 in VPC-A
